@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E21AF95C2A7B965B00E33912 /* goparserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF95B2A7B965B00E33912 /* goparserApp.swift */; };
+		E21AF95E2A7B965B00E33912 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF95D2A7B965B00E33912 /* ContentView.swift */; };
+		E21AF9602A7B966400E33912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21AF95F2A7B966400E33912 /* Assets.xcassets */; };
+		E21AF9632A7B966400E33912 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9622A7B966400E33912 /* Preview Assets.xcassets */; };
+		E21AF96E2A7B966400E33912 /* goparserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF96D2A7B966400E33912 /* goparserTests.swift */; };
+		E21AF9782A7B966400E33912 /* goparserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9772A7B966400E33912 /* goparserUITests.swift */; };
+		E21AF97A2A7B966400E33912 /* goparserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9792A7B966400E33912 /* goparserUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E21AF96A2A7B966400E33912 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E21AF9502A7B965B00E33912 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E21AF9572A7B965B00E33912;
+			remoteInfo = goparser;
+		};
+		E21AF9742A7B966400E33912 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E21AF9502A7B965B00E33912 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E21AF9572A7B965B00E33912;
+			remoteInfo = goparser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E21AF9582A7B965B00E33912 /* goparser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goparser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21AF95B2A7B965B00E33912 /* goparserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserApp.swift; sourceTree = "<group>"; };
+		E21AF95D2A7B965B00E33912 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E21AF95F2A7B966400E33912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E21AF9622A7B966400E33912 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E21AF9642A7B966400E33912 /* goparser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = goparser.entitlements; sourceTree = "<group>"; };
+		E21AF9692A7B966400E33912 /* goparserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goparserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21AF96D2A7B966400E33912 /* goparserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserTests.swift; sourceTree = "<group>"; };
+		E21AF9732A7B966400E33912 /* goparserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goparserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21AF9772A7B966400E33912 /* goparserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserUITests.swift; sourceTree = "<group>"; };
+		E21AF9792A7B966400E33912 /* goparserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E21AF9552A7B965B00E33912 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21AF9662A7B966400E33912 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21AF9702A7B966400E33912 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E21AF94F2A7B965B00E33912 = {
+			isa = PBXGroup;
+			children = (
+				E21AF95A2A7B965B00E33912 /* goparser */,
+				E21AF96C2A7B966400E33912 /* goparserTests */,
+				E21AF9762A7B966400E33912 /* goparserUITests */,
+				E21AF9592A7B965B00E33912 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E21AF9592A7B965B00E33912 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9582A7B965B00E33912 /* goparser.app */,
+				E21AF9692A7B966400E33912 /* goparserTests.xctest */,
+				E21AF9732A7B966400E33912 /* goparserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E21AF95A2A7B965B00E33912 /* goparser */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF95B2A7B965B00E33912 /* goparserApp.swift */,
+				E21AF95D2A7B965B00E33912 /* ContentView.swift */,
+				E21AF95F2A7B966400E33912 /* Assets.xcassets */,
+				E21AF9642A7B966400E33912 /* goparser.entitlements */,
+				E21AF9612A7B966400E33912 /* Preview Content */,
+			);
+			path = goparser;
+			sourceTree = "<group>";
+		};
+		E21AF9612A7B966400E33912 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9622A7B966400E33912 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E21AF96C2A7B966400E33912 /* goparserTests */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF96D2A7B966400E33912 /* goparserTests.swift */,
+			);
+			path = goparserTests;
+			sourceTree = "<group>";
+		};
+		E21AF9762A7B966400E33912 /* goparserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9772A7B966400E33912 /* goparserUITests.swift */,
+				E21AF9792A7B966400E33912 /* goparserUITestsLaunchTests.swift */,
+			);
+			path = goparserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E21AF9572A7B965B00E33912 /* goparser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E21AF97D2A7B966400E33912 /* Build configuration list for PBXNativeTarget "goparser" */;
+			buildPhases = (
+				E21AF9542A7B965B00E33912 /* Sources */,
+				E21AF9552A7B965B00E33912 /* Frameworks */,
+				E21AF9562A7B965B00E33912 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = goparser;
+			productName = goparser;
+			productReference = E21AF9582A7B965B00E33912 /* goparser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E21AF9682A7B966400E33912 /* goparserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E21AF9802A7B966400E33912 /* Build configuration list for PBXNativeTarget "goparserTests" */;
+			buildPhases = (
+				E21AF9652A7B966400E33912 /* Sources */,
+				E21AF9662A7B966400E33912 /* Frameworks */,
+				E21AF9672A7B966400E33912 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E21AF96B2A7B966400E33912 /* PBXTargetDependency */,
+			);
+			name = goparserTests;
+			productName = goparserTests;
+			productReference = E21AF9692A7B966400E33912 /* goparserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E21AF9722A7B966400E33912 /* goparserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E21AF9832A7B966400E33912 /* Build configuration list for PBXNativeTarget "goparserUITests" */;
+			buildPhases = (
+				E21AF96F2A7B966400E33912 /* Sources */,
+				E21AF9702A7B966400E33912 /* Frameworks */,
+				E21AF9712A7B966400E33912 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E21AF9752A7B966400E33912 /* PBXTargetDependency */,
+			);
+			name = goparserUITests;
+			productName = goparserUITests;
+			productReference = E21AF9732A7B966400E33912 /* goparserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E21AF9502A7B965B00E33912 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E21AF9572A7B965B00E33912 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E21AF9682A7B966400E33912 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E21AF9572A7B965B00E33912;
+					};
+					E21AF9722A7B966400E33912 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E21AF9572A7B965B00E33912;
+					};
+				};
+			};
+			buildConfigurationList = E21AF9532A7B965B00E33912 /* Build configuration list for PBXProject "goparser" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E21AF94F2A7B965B00E33912;
+			productRefGroup = E21AF9592A7B965B00E33912 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E21AF9572A7B965B00E33912 /* goparser */,
+				E21AF9682A7B966400E33912 /* goparserTests */,
+				E21AF9722A7B966400E33912 /* goparserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E21AF9562A7B965B00E33912 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21AF9632A7B966400E33912 /* Preview Assets.xcassets in Resources */,
+				E21AF9602A7B966400E33912 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21AF9672A7B966400E33912 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21AF9712A7B966400E33912 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E21AF9542A7B965B00E33912 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21AF95E2A7B965B00E33912 /* ContentView.swift in Sources */,
+				E21AF95C2A7B965B00E33912 /* goparserApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21AF9652A7B966400E33912 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21AF96E2A7B966400E33912 /* goparserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E21AF96F2A7B966400E33912 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21AF97A2A7B966400E33912 /* goparserUITestsLaunchTests.swift in Sources */,
+				E21AF9782A7B966400E33912 /* goparserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E21AF96B2A7B966400E33912 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E21AF9572A7B965B00E33912 /* goparser */;
+			targetProxy = E21AF96A2A7B966400E33912 /* PBXContainerItemProxy */;
+		};
+		E21AF9752A7B966400E33912 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E21AF9572A7B965B00E33912 /* goparser */;
+			targetProxy = E21AF9742A7B966400E33912 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E21AF97B2A7B966400E33912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E21AF97C2A7B966400E33912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E21AF97E2A7B966400E33912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = goparser/goparser.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goparser/Preview Content\"";
+				DEVELOPMENT_TEAM = XFX29M3795;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E21AF97F2A7B966400E33912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = goparser/goparser.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goparser/Preview Content\"";
+				DEVELOPMENT_TEAM = XFX29M3795;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E21AF9812A7B966400E33912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFX29M3795;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goparser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/goparser";
+			};
+			name = Debug;
+		};
+		E21AF9822A7B966400E33912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFX29M3795;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goparser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/goparser";
+			};
+			name = Release;
+		};
+		E21AF9842A7B966400E33912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFX29M3795;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = goparser;
+			};
+			name = Debug;
+		};
+		E21AF9852A7B966400E33912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFX29M3795;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = goparser;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E21AF9532A7B965B00E33912 /* Build configuration list for PBXProject "goparser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E21AF97B2A7B966400E33912 /* Debug */,
+				E21AF97C2A7B966400E33912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E21AF97D2A7B966400E33912 /* Build configuration list for PBXNativeTarget "goparser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E21AF97E2A7B966400E33912 /* Debug */,
+				E21AF97F2A7B966400E33912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E21AF9802A7B966400E33912 /* Build configuration list for PBXNativeTarget "goparserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E21AF9812A7B966400E33912 /* Debug */,
+				E21AF9822A7B966400E33912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E21AF9832A7B966400E33912 /* Build configuration list for PBXNativeTarget "goparserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E21AF9842A7B966400E33912 /* Debug */,
+				E21AF9852A7B966400E33912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E21AF9502A7B965B00E33912 /* Project object */;
+}
