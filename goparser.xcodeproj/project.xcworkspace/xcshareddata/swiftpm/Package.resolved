@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "antlr4",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/antlr/antlr4.git",
+      "state" : {
+        "revision" : "0ae86c2d69b6c438154e263a8b41195ed3c7377f",
+        "version" : "4.13.0"
+      }
+    },
+    {
+      "identity" : "filekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nvzqz/FileKit.git",
+      "state" : {
+        "revision" : "9006d2888025fbe893c3c396327b2fe45a8c177b",
+        "version" : "6.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

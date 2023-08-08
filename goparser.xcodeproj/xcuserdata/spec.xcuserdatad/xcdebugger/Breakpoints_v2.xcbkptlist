@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B5DA72C7-E425-4396-A5E4-3C48BD12E9FE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D71296E-A8C3-49B4-A41B-E18BB410CDE7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "parse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2D71296E-A8C3-49B4-A41B-E18BB410CDE7 - f5a6901636bdfb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "goparser.LParser.parse() -&gt; ()"
+                  moduleName = "goparser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1410">
+               </Location>
+               <Location
+                  uuid = "2D71296E-A8C3-49B4-A41B-E18BB410CDE7 - f5a6901636bdff1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "goparser.LParser.parse() -&gt; ()"
+                  moduleName = "goparser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85A7D2AA-FF20-4633-A9C8-71108051C04A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "parse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85A7D2AA-FF20-4633-A9C8-71108051C04A - f5a6901636bde75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "goparser.LParser.parse() -&gt; ()"
+                  moduleName = "goparser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "875">
+               </Location>
+               <Location
+                  uuid = "85A7D2AA-FF20-4633-A9C8-71108051C04A - f5a6901636bdfb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "goparser.LParser.parse() -&gt; ()"
+                  moduleName = "goparser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "948">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06041848-F518-4F62-92F1-CBDA30262616"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "parse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2535FDA7-8148-44B2-8940-E06A69237E70"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/parserGo/GoParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5070"
+            endingLineNumber = "5070"
+            landmarkName = "typeLit()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

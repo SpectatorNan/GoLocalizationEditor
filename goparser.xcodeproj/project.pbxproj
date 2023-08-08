@@ -14,6 +14,17 @@
 		E21AF96E2A7B966400E33912 /* goparserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF96D2A7B966400E33912 /* goparserTests.swift */; };
 		E21AF9782A7B966400E33912 /* goparserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9772A7B966400E33912 /* goparserUITests.swift */; };
 		E21AF97A2A7B966400E33912 /* goparserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9792A7B966400E33912 /* goparserUITestsLaunchTests.swift */; };
+		E21AF9882A7BED2100E33912 /* FileKit in Frameworks */ = {isa = PBXBuildFile; productRef = E21AF9872A7BED2100E33912 /* FileKit */; };
+		E21AF98B2A7C0B7000E33912 /* Antlr4 in Frameworks */ = {isa = PBXBuildFile; productRef = E21AF98A2A7C0B7000E33912 /* Antlr4 */; };
+		E21AF98F2A7E1F8900E33912 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF98E2A7E1F8900E33912 /* Assistant.swift */; };
+		E21AF9912A7E31A200E33912 /* GoModelParser.g4 in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9902A7E31A200E33912 /* GoModelParser.g4 */; };
+		E21AF9A72A80C78D00E33912 /* GoParserBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A32A80C78D00E33912 /* GoParserBaseListener.swift */; };
+		E21AF9A82A80C78D00E33912 /* GoParserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A42A80C78D00E33912 /* GoParserListener.swift */; };
+		E21AF9A92A80C78D00E33912 /* GoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A52A80C78D00E33912 /* GoParser.swift */; };
+		E21AF9AA2A80C78D00E33912 /* GoLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A62A80C78D00E33912 /* GoLexer.swift */; };
+		E21AF9AC2A80CBB800E33912 /* GoParserBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9AB2A80CBB800E33912 /* GoParserBase.swift */; };
+		E21AF9B02A8131E600E33912 /* GoLexer.g4 in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9AE2A8131E600E33912 /* GoLexer.g4 */; };
+		E21AF9B12A8131E600E33912 /* GoParser.g4 in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9AF2A8131E600E33912 /* GoParser.g4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,15 @@
 		E21AF9732A7B966400E33912 /* goparserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goparserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21AF9772A7B966400E33912 /* goparserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserUITests.swift; sourceTree = "<group>"; };
 		E21AF9792A7B966400E33912 /* goparserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E21AF98E2A7E1F8900E33912 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
+		E21AF9902A7E31A200E33912 /* GoModelParser.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = GoModelParser.g4; sourceTree = "<group>"; };
+		E21AF9A32A80C78D00E33912 /* GoParserBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParserBaseListener.swift; sourceTree = "<group>"; };
+		E21AF9A42A80C78D00E33912 /* GoParserListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParserListener.swift; sourceTree = "<group>"; };
+		E21AF9A52A80C78D00E33912 /* GoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParser.swift; sourceTree = "<group>"; };
+		E21AF9A62A80C78D00E33912 /* GoLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoLexer.swift; sourceTree = "<group>"; };
+		E21AF9AB2A80CBB800E33912 /* GoParserBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoParserBase.swift; sourceTree = "<group>"; };
+		E21AF9AE2A8131E600E33912 /* GoLexer.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GoLexer.g4; sourceTree = "<group>"; };
+		E21AF9AF2A8131E600E33912 /* GoParser.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GoParser.g4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21AF9882A7BED2100E33912 /* FileKit in Frameworks */,
+				E21AF98B2A7C0B7000E33912 /* Antlr4 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +117,15 @@
 		E21AF95A2A7B965B00E33912 /* goparser */ = {
 			isa = PBXGroup;
 			children = (
+				E21AF9AD2A8131CF00E33912 /* antlr */,
+				E21AF9922A7E4D2300E33912 /* parserGo */,
 				E21AF95B2A7B965B00E33912 /* goparserApp.swift */,
 				E21AF95D2A7B965B00E33912 /* ContentView.swift */,
 				E21AF95F2A7B966400E33912 /* Assets.xcassets */,
 				E21AF9642A7B966400E33912 /* goparser.entitlements */,
 				E21AF9612A7B966400E33912 /* Preview Content */,
+				E21AF98E2A7E1F8900E33912 /* Assistant.swift */,
+				E21AF9902A7E31A200E33912 /* GoModelParser.g4 */,
 			);
 			path = goparser;
 			sourceTree = "<group>";
@@ -129,6 +155,27 @@
 			path = goparserUITests;
 			sourceTree = "<group>";
 		};
+		E21AF9922A7E4D2300E33912 /* parserGo */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9A62A80C78D00E33912 /* GoLexer.swift */,
+				E21AF9A52A80C78D00E33912 /* GoParser.swift */,
+				E21AF9A32A80C78D00E33912 /* GoParserBaseListener.swift */,
+				E21AF9A42A80C78D00E33912 /* GoParserListener.swift */,
+				E21AF9AB2A80CBB800E33912 /* GoParserBase.swift */,
+			);
+			path = parserGo;
+			sourceTree = "<group>";
+		};
+		E21AF9AD2A8131CF00E33912 /* antlr */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9AE2A8131E600E33912 /* GoLexer.g4 */,
+				E21AF9AF2A8131E600E33912 /* GoParser.g4 */,
+			);
+			path = antlr;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +192,10 @@
 			dependencies = (
 			);
 			name = goparser;
+			packageProductDependencies = (
+				E21AF9872A7BED2100E33912 /* FileKit */,
+				E21AF98A2A7C0B7000E33912 /* Antlr4 */,
+			);
 			productName = goparser;
 			productReference = E21AF9582A7B965B00E33912 /* goparser.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +268,10 @@
 				Base,
 			);
 			mainGroup = E21AF94F2A7B965B00E33912;
+			packageReferences = (
+				E21AF9862A7BED2100E33912 /* XCRemoteSwiftPackageReference "FileKit" */,
+				E21AF9892A7C0B7000E33912 /* XCRemoteSwiftPackageReference "antlr4" */,
+			);
 			productRefGroup = E21AF9592A7B965B00E33912 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21AF9B12A8131E600E33912 /* GoParser.g4 in Resources */,
+				E21AF9912A7E31A200E33912 /* GoModelParser.g4 in Resources */,
+				E21AF9B02A8131E600E33912 /* GoLexer.g4 in Resources */,
 				E21AF9632A7B966400E33912 /* Preview Assets.xcassets in Resources */,
 				E21AF9602A7B966400E33912 /* Assets.xcassets in Resources */,
 			);
@@ -259,8 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21AF98F2A7E1F8900E33912 /* Assistant.swift in Sources */,
+				E21AF9A92A80C78D00E33912 /* GoParser.swift in Sources */,
 				E21AF95E2A7B965B00E33912 /* ContentView.swift in Sources */,
+				E21AF9AC2A80CBB800E33912 /* GoParserBase.swift in Sources */,
+				E21AF9A82A80C78D00E33912 /* GoParserListener.swift in Sources */,
 				E21AF95C2A7B965B00E33912 /* goparserApp.swift in Sources */,
+				E21AF9A72A80C78D00E33912 /* GoParserBaseListener.swift in Sources */,
+				E21AF9AA2A80C78D00E33912 /* GoLexer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +490,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"goparser/Preview Content\"";
 				DEVELOPMENT_TEAM = XFX29M3795;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -453,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"goparser/Preview Content\"";
 				DEVELOPMENT_TEAM = XFX29M3795;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -581,6 +645,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E21AF9862A7BED2100E33912 /* XCRemoteSwiftPackageReference "FileKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nvzqz/FileKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		E21AF9892A7C0B7000E33912 /* XCRemoteSwiftPackageReference "antlr4" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/antlr/antlr4.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E21AF9872A7BED2100E33912 /* FileKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E21AF9862A7BED2100E33912 /* XCRemoteSwiftPackageReference "FileKit" */;
+			productName = FileKit;
+		};
+		E21AF98A2A7C0B7000E33912 /* Antlr4 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E21AF9892A7C0B7000E33912 /* XCRemoteSwiftPackageReference "antlr4" */;
+			productName = Antlr4;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E21AF9502A7B965B00E33912 /* Project object */;
 }
