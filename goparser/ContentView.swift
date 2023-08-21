@@ -38,15 +38,38 @@ struct LParser {
         do {
             let text = try textFile.read()
             print(text)
+            var count = 0
+            if let result = try GoModelParser.parser(text) {
+                for model in result.models {
+                    if let model = model as? TypeStruct {
+                        print("type: \(model.name.text)")
+                        for field in model.fields {
+                            print("==>field: \(field.name.text)")
+                            count += 1
+                            if let tag = field.tag {
+                                print("====>tag: \(tag.text)")
+                            } else {
+                                print("====>tag: nil")
+                            }
+                        }
+                    } else {
+                        print("not struct")
+                    }
+                }
+            }
+            print("count: \(count)")
+//            let stream = ANTLRInputStream(text)
+//            let lexer = GoLexer(stream)
+//            let tokens = CommonTokenStream(lexer)
+//            let parser = try GoParser(tokens)
+//            
+//            let visitor = GoParserVisitor<GoParserResult>()
+//            let tree = try parser.sourceFile()
             
-            let stream = ANTLRInputStream(text)
-            let lexer = GoLexer(stream)
-            let tokens = CommonTokenStream(lexer)
-            let parser = try GoParser(tokens)
-            let tree = try parser.typeLit()
+//            let tree = try parser.typeLit().accept(visitor)
             
 //            let tree = try parser.sourceFile()
-            print(tree)
+//            print(tree)
         } catch {
             print(error)
         }
@@ -54,18 +77,15 @@ struct LParser {
     
 }
 
-class ApiParser: Parser {
-    
+struct GoParserResult {
+
 }
-
-class ApiVisitor<T>: ParseTreeVisitor<T> {
-    var debug: Bool = false
-    var prefix: String = ""
-    var infoFlag = false
-}
- 
-
-
+//turbo2pay@gmail.com
+//Qaz123456.
+//Jason1158998.
+//admin2021168.
 #Preview {
     ContentView()
 }
+//rSJyRGQd3y3V
+//28836

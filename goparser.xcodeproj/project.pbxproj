@@ -18,13 +18,27 @@
 		E21AF98B2A7C0B7000E33912 /* Antlr4 in Frameworks */ = {isa = PBXBuildFile; productRef = E21AF98A2A7C0B7000E33912 /* Antlr4 */; };
 		E21AF98F2A7E1F8900E33912 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF98E2A7E1F8900E33912 /* Assistant.swift */; };
 		E21AF9912A7E31A200E33912 /* GoModelParser.g4 in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9902A7E31A200E33912 /* GoModelParser.g4 */; };
-		E21AF9A72A80C78D00E33912 /* GoParserBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A32A80C78D00E33912 /* GoParserBaseListener.swift */; };
-		E21AF9A82A80C78D00E33912 /* GoParserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A42A80C78D00E33912 /* GoParserListener.swift */; };
-		E21AF9A92A80C78D00E33912 /* GoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A52A80C78D00E33912 /* GoParser.swift */; };
-		E21AF9AA2A80C78D00E33912 /* GoLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9A62A80C78D00E33912 /* GoLexer.swift */; };
-		E21AF9AC2A80CBB800E33912 /* GoParserBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9AB2A80CBB800E33912 /* GoParserBase.swift */; };
-		E21AF9B02A8131E600E33912 /* GoLexer.g4 in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9AE2A8131E600E33912 /* GoLexer.g4 */; };
-		E21AF9B12A8131E600E33912 /* GoParser.g4 in Resources */ = {isa = PBXBuildFile; fileRef = E21AF9AF2A8131E600E33912 /* GoParser.g4 */; };
+		E21AF9B72A81EBA100E33912 /* GoVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9B62A81EBA100E33912 /* GoVisitor.swift */; };
+		E21AF9B92A81F55B00E33912 /* GoParserBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9B82A81F55B00E33912 /* GoParserBase.swift */; };
+		E21AF9C12A8CB91000E33912 /* GomodelsParserBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9BB2A8CB91000E33912 /* GomodelsParserBaseVisitor.swift */; };
+		E21AF9C22A8CB91000E33912 /* GomodelsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9BC2A8CB91000E33912 /* GomodelsParser.swift */; };
+		E21AF9C32A8CB91000E33912 /* GomodelsParserBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9BD2A8CB91000E33912 /* GomodelsParserBaseListener.swift */; };
+		E21AF9C42A8CB91000E33912 /* GomodelsParserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9BE2A8CB91000E33912 /* GomodelsParserListener.swift */; };
+		E21AF9C52A8CB91000E33912 /* GomodelsLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9BF2A8CB91000E33912 /* GomodelsLexer.swift */; };
+		E21AF9C62A8CB91000E33912 /* GomodelsParserVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9C02A8CB91000E33912 /* GomodelsParserVisitor.swift */; };
+		E21AF9C92A8CB97700E33912 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9C82A8CB97700E33912 /* parser.swift */; };
+		E21AF9CD2A8DB51A00E33912 /* visitor1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9CC2A8DB51A00E33912 /* visitor1.swift */; };
+		E2E779612A934C1C00AB3F16 /* Expr.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779602A934C1C00AB3F16 /* Expr.swift */; };
+		E2E779632A93B5DB00AB3F16 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779622A93B5DB00AB3F16 /* DataType.swift */; };
+		E2E779652A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779642A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift */; };
+		E2E779672A93B6B500AB3F16 /* MapDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779662A93B6B500AB3F16 /* MapDataType.swift */; };
+		E2E779692A93B6CA00AB3F16 /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779682A93B6CA00AB3F16 /* Pointer.swift */; };
+		E2E7796B2A93B6DB00AB3F16 /* ArrayDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7796A2A93B6DB00AB3F16 /* ArrayDataType.swift */; };
+		E2E7796D2A93B70100AB3F16 /* TypeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7796C2A93B70100AB3F16 /* TypeField.swift */; };
+		E2E7796F2A93B71E00AB3F16 /* TypeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7796E2A93B71E00AB3F16 /* TypeStruct.swift */; };
+		E2E779712A93B73900AB3F16 /* Token+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779702A93B73900AB3F16 /* Token+Ex.swift */; };
+		E2E779732A93B76C00AB3F16 /* ModelResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779722A93B76C00AB3F16 /* ModelResult.swift */; };
+		E2E779752A93B79C00AB3F16 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779742A93B79C00AB3F16 /* Visitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +72,27 @@
 		E21AF9792A7B966400E33912 /* goparserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E21AF98E2A7E1F8900E33912 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
 		E21AF9902A7E31A200E33912 /* GoModelParser.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = GoModelParser.g4; sourceTree = "<group>"; };
-		E21AF9A32A80C78D00E33912 /* GoParserBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParserBaseListener.swift; sourceTree = "<group>"; };
-		E21AF9A42A80C78D00E33912 /* GoParserListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParserListener.swift; sourceTree = "<group>"; };
-		E21AF9A52A80C78D00E33912 /* GoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParser.swift; sourceTree = "<group>"; };
-		E21AF9A62A80C78D00E33912 /* GoLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoLexer.swift; sourceTree = "<group>"; };
-		E21AF9AB2A80CBB800E33912 /* GoParserBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoParserBase.swift; sourceTree = "<group>"; };
-		E21AF9AE2A8131E600E33912 /* GoLexer.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GoLexer.g4; sourceTree = "<group>"; };
-		E21AF9AF2A8131E600E33912 /* GoParser.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GoParser.g4; sourceTree = "<group>"; };
+		E21AF9B62A81EBA100E33912 /* GoVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoVisitor.swift; sourceTree = "<group>"; };
+		E21AF9B82A81F55B00E33912 /* GoParserBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoParserBase.swift; sourceTree = "<group>"; };
+		E21AF9BB2A8CB91000E33912 /* GomodelsParserBaseVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsParserBaseVisitor.swift; sourceTree = "<group>"; };
+		E21AF9BC2A8CB91000E33912 /* GomodelsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsParser.swift; sourceTree = "<group>"; };
+		E21AF9BD2A8CB91000E33912 /* GomodelsParserBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsParserBaseListener.swift; sourceTree = "<group>"; };
+		E21AF9BE2A8CB91000E33912 /* GomodelsParserListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsParserListener.swift; sourceTree = "<group>"; };
+		E21AF9BF2A8CB91000E33912 /* GomodelsLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsLexer.swift; sourceTree = "<group>"; };
+		E21AF9C02A8CB91000E33912 /* GomodelsParserVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsParserVisitor.swift; sourceTree = "<group>"; };
+		E21AF9C82A8CB97700E33912 /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
+		E21AF9CC2A8DB51A00E33912 /* visitor1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visitor1.swift; sourceTree = "<group>"; };
+		E2E779602A934C1C00AB3F16 /* Expr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expr.swift; sourceTree = "<group>"; };
+		E2E779622A93B5DB00AB3F16 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		E2E779642A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GomodelsParserBaseVisitor+Ex.swift"; sourceTree = "<group>"; };
+		E2E779662A93B6B500AB3F16 /* MapDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataType.swift; sourceTree = "<group>"; };
+		E2E779682A93B6CA00AB3F16 /* Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointer.swift; sourceTree = "<group>"; };
+		E2E7796A2A93B6DB00AB3F16 /* ArrayDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataType.swift; sourceTree = "<group>"; };
+		E2E7796C2A93B70100AB3F16 /* TypeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeField.swift; sourceTree = "<group>"; };
+		E2E7796E2A93B71E00AB3F16 /* TypeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeStruct.swift; sourceTree = "<group>"; };
+		E2E779702A93B73900AB3F16 /* Token+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Ex.swift"; sourceTree = "<group>"; };
+		E2E779722A93B76C00AB3F16 /* ModelResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelResult.swift; sourceTree = "<group>"; };
+		E2E779742A93B79C00AB3F16 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +145,9 @@
 		E21AF95A2A7B965B00E33912 /* goparser */ = {
 			isa = PBXGroup;
 			children = (
+				E21AF9C72A8CB91F00E33912 /* parser */,
+				E21AF9BA2A823E9400E33912 /* utils */,
 				E21AF9AD2A8131CF00E33912 /* antlr */,
-				E21AF9922A7E4D2300E33912 /* parserGo */,
 				E21AF95B2A7B965B00E33912 /* goparserApp.swift */,
 				E21AF95D2A7B965B00E33912 /* ContentView.swift */,
 				E21AF95F2A7B966400E33912 /* Assets.xcassets */,
@@ -155,25 +184,46 @@
 			path = goparserUITests;
 			sourceTree = "<group>";
 		};
-		E21AF9922A7E4D2300E33912 /* parserGo */ = {
-			isa = PBXGroup;
-			children = (
-				E21AF9A62A80C78D00E33912 /* GoLexer.swift */,
-				E21AF9A52A80C78D00E33912 /* GoParser.swift */,
-				E21AF9A32A80C78D00E33912 /* GoParserBaseListener.swift */,
-				E21AF9A42A80C78D00E33912 /* GoParserListener.swift */,
-				E21AF9AB2A80CBB800E33912 /* GoParserBase.swift */,
-			);
-			path = parserGo;
-			sourceTree = "<group>";
-		};
 		E21AF9AD2A8131CF00E33912 /* antlr */ = {
 			isa = PBXGroup;
 			children = (
-				E21AF9AE2A8131E600E33912 /* GoLexer.g4 */,
-				E21AF9AF2A8131E600E33912 /* GoParser.g4 */,
+				E21AF9BF2A8CB91000E33912 /* GomodelsLexer.swift */,
+				E21AF9BC2A8CB91000E33912 /* GomodelsParser.swift */,
+				E21AF9BD2A8CB91000E33912 /* GomodelsParserBaseListener.swift */,
+				E21AF9BB2A8CB91000E33912 /* GomodelsParserBaseVisitor.swift */,
+				E21AF9BE2A8CB91000E33912 /* GomodelsParserListener.swift */,
+				E21AF9C02A8CB91000E33912 /* GomodelsParserVisitor.swift */,
 			);
 			path = antlr;
+			sourceTree = "<group>";
+		};
+		E21AF9BA2A823E9400E33912 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9B82A81F55B00E33912 /* GoParserBase.swift */,
+				E21AF9B62A81EBA100E33912 /* GoVisitor.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E21AF9C72A8CB91F00E33912 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF9C82A8CB97700E33912 /* parser.swift */,
+				E21AF9CC2A8DB51A00E33912 /* visitor1.swift */,
+				E2E779602A934C1C00AB3F16 /* Expr.swift */,
+				E2E779622A93B5DB00AB3F16 /* DataType.swift */,
+				E2E779642A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift */,
+				E2E779662A93B6B500AB3F16 /* MapDataType.swift */,
+				E2E779682A93B6CA00AB3F16 /* Pointer.swift */,
+				E2E7796A2A93B6DB00AB3F16 /* ArrayDataType.swift */,
+				E2E7796C2A93B70100AB3F16 /* TypeField.swift */,
+				E2E7796E2A93B71E00AB3F16 /* TypeStruct.swift */,
+				E2E779702A93B73900AB3F16 /* Token+Ex.swift */,
+				E2E779722A93B76C00AB3F16 /* ModelResult.swift */,
+				E2E779742A93B79C00AB3F16 /* Visitor.swift */,
+			);
+			path = parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E21AF9B12A8131E600E33912 /* GoParser.g4 in Resources */,
 				E21AF9912A7E31A200E33912 /* GoModelParser.g4 in Resources */,
-				E21AF9B02A8131E600E33912 /* GoLexer.g4 in Resources */,
 				E21AF9632A7B966400E33912 /* Preview Assets.xcassets in Resources */,
 				E21AF9602A7B966400E33912 /* Assets.xcassets in Resources */,
 			);
@@ -317,14 +365,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E779672A93B6B500AB3F16 /* MapDataType.swift in Sources */,
+				E2E779732A93B76C00AB3F16 /* ModelResult.swift in Sources */,
+				E21AF9C92A8CB97700E33912 /* parser.swift in Sources */,
+				E2E779632A93B5DB00AB3F16 /* DataType.swift in Sources */,
+				E21AF9C12A8CB91000E33912 /* GomodelsParserBaseVisitor.swift in Sources */,
+				E2E7796D2A93B70100AB3F16 /* TypeField.swift in Sources */,
+				E2E779652A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift in Sources */,
+				E21AF9C22A8CB91000E33912 /* GomodelsParser.swift in Sources */,
+				E21AF9B72A81EBA100E33912 /* GoVisitor.swift in Sources */,
 				E21AF98F2A7E1F8900E33912 /* Assistant.swift in Sources */,
-				E21AF9A92A80C78D00E33912 /* GoParser.swift in Sources */,
 				E21AF95E2A7B965B00E33912 /* ContentView.swift in Sources */,
-				E21AF9AC2A80CBB800E33912 /* GoParserBase.swift in Sources */,
-				E21AF9A82A80C78D00E33912 /* GoParserListener.swift in Sources */,
+				E2E7796F2A93B71E00AB3F16 /* TypeStruct.swift in Sources */,
 				E21AF95C2A7B965B00E33912 /* goparserApp.swift in Sources */,
-				E21AF9A72A80C78D00E33912 /* GoParserBaseListener.swift in Sources */,
-				E21AF9AA2A80C78D00E33912 /* GoLexer.swift in Sources */,
+				E21AF9C32A8CB91000E33912 /* GomodelsParserBaseListener.swift in Sources */,
+				E21AF9C62A8CB91000E33912 /* GomodelsParserVisitor.swift in Sources */,
+				E2E7796B2A93B6DB00AB3F16 /* ArrayDataType.swift in Sources */,
+				E2E779752A93B79C00AB3F16 /* Visitor.swift in Sources */,
+				E21AF9C42A8CB91000E33912 /* GomodelsParserListener.swift in Sources */,
+				E2E779612A934C1C00AB3F16 /* Expr.swift in Sources */,
+				E21AF9C52A8CB91000E33912 /* GomodelsLexer.swift in Sources */,
+				E2E779712A93B73900AB3F16 /* Token+Ex.swift in Sources */,
+				E21AF9CD2A8DB51A00E33912 /* visitor1.swift in Sources */,
+				E21AF9B92A81F55B00E33912 /* GoParserBase.swift in Sources */,
+				E2E779692A93B6CA00AB3F16 /* Pointer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
