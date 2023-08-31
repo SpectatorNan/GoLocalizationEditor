@@ -28,6 +28,9 @@
 		E21AF9C62A8CB91000E33912 /* GomodelsParserVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9C02A8CB91000E33912 /* GomodelsParserVisitor.swift */; };
 		E21AF9C92A8CB97700E33912 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9C82A8CB97700E33912 /* parser.swift */; };
 		E21AF9CD2A8DB51A00E33912 /* visitor1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF9CC2A8DB51A00E33912 /* visitor1.swift */; };
+		E29247C92A9A416C008C5F70 /* Panel+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29247C82A9A416C008C5F70 /* Panel+Ex.swift */; };
+		E29247CC2A9DCD6E008C5F70 /* GolangLocaleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29247CB2A9DCD6E008C5F70 /* GolangLocaleUtils.swift */; };
+		E29247CE2A9DCD86008C5F70 /* LocaleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29247CD2A9DCD86008C5F70 /* LocaleLanguage.swift */; };
 		E2E779612A934C1C00AB3F16 /* Expr.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779602A934C1C00AB3F16 /* Expr.swift */; };
 		E2E779632A93B5DB00AB3F16 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779622A93B5DB00AB3F16 /* DataType.swift */; };
 		E2E779652A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E779642A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift */; };
@@ -82,6 +85,10 @@
 		E21AF9C02A8CB91000E33912 /* GomodelsParserVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GomodelsParserVisitor.swift; sourceTree = "<group>"; };
 		E21AF9C82A8CB97700E33912 /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
 		E21AF9CC2A8DB51A00E33912 /* visitor1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = visitor1.swift; sourceTree = "<group>"; };
+		E29247C82A9A416C008C5F70 /* Panel+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Panel+Ex.swift"; sourceTree = "<group>"; };
+		E29247CA2A9B09AA008C5F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E29247CB2A9DCD6E008C5F70 /* GolangLocaleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolangLocaleUtils.swift; sourceTree = "<group>"; };
+		E29247CD2A9DCD86008C5F70 /* LocaleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleLanguage.swift; sourceTree = "<group>"; };
 		E2E779602A934C1C00AB3F16 /* Expr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expr.swift; sourceTree = "<group>"; };
 		E2E779622A93B5DB00AB3F16 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		E2E779642A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GomodelsParserBaseVisitor+Ex.swift"; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 		E21AF95A2A7B965B00E33912 /* goparser */ = {
 			isa = PBXGroup;
 			children = (
+				E29247CA2A9B09AA008C5F70 /* Info.plist */,
 				E21AF9C72A8CB91F00E33912 /* parser */,
 				E21AF9BA2A823E9400E33912 /* utils */,
 				E21AF9AD2A8131CF00E33912 /* antlr */,
@@ -202,6 +210,9 @@
 			children = (
 				E21AF9B82A81F55B00E33912 /* GoParserBase.swift */,
 				E21AF9B62A81EBA100E33912 /* GoVisitor.swift */,
+				E29247C82A9A416C008C5F70 /* Panel+Ex.swift */,
+				E29247CB2A9DCD6E008C5F70 /* GolangLocaleUtils.swift */,
+				E29247CD2A9DCD86008C5F70 /* LocaleLanguage.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -370,6 +381,7 @@
 				E21AF9C92A8CB97700E33912 /* parser.swift in Sources */,
 				E2E779632A93B5DB00AB3F16 /* DataType.swift in Sources */,
 				E21AF9C12A8CB91000E33912 /* GomodelsParserBaseVisitor.swift in Sources */,
+				E29247C92A9A416C008C5F70 /* Panel+Ex.swift in Sources */,
 				E2E7796D2A93B70100AB3F16 /* TypeField.swift in Sources */,
 				E2E779652A93B60C00AB3F16 /* GomodelsParserBaseVisitor+Ex.swift in Sources */,
 				E21AF9C22A8CB91000E33912 /* GomodelsParser.swift in Sources */,
@@ -379,12 +391,14 @@
 				E2E7796F2A93B71E00AB3F16 /* TypeStruct.swift in Sources */,
 				E21AF95C2A7B965B00E33912 /* goparserApp.swift in Sources */,
 				E21AF9C32A8CB91000E33912 /* GomodelsParserBaseListener.swift in Sources */,
+				E29247CC2A9DCD6E008C5F70 /* GolangLocaleUtils.swift in Sources */,
 				E21AF9C62A8CB91000E33912 /* GomodelsParserVisitor.swift in Sources */,
 				E2E7796B2A93B6DB00AB3F16 /* ArrayDataType.swift in Sources */,
 				E2E779752A93B79C00AB3F16 /* Visitor.swift in Sources */,
 				E21AF9C42A8CB91000E33912 /* GomodelsParserListener.swift in Sources */,
 				E2E779612A934C1C00AB3F16 /* Expr.swift in Sources */,
 				E21AF9C52A8CB91000E33912 /* GomodelsLexer.swift in Sources */,
+				E29247CE2A9DCD86008C5F70 /* LocaleLanguage.swift in Sources */,
 				E2E779712A93B73900AB3F16 /* Token+Ex.swift in Sources */,
 				E21AF9CD2A8DB51A00E33912 /* visitor1.swift in Sources */,
 				E21AF9B92A81F55B00E33912 /* GoParserBase.swift in Sources */,
@@ -557,11 +571,13 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = goparser/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,11 +600,13 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = goparser/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
