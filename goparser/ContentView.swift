@@ -105,9 +105,14 @@ struct ContentView: View {
     
     @State var targetFiles: [TargetFile] = []
     @State var exportPath: String = ""
-    @State var supportLanguage: [LocaleLanguage] = [.zh_hans]
+    
+    @State var showExportPath: Bool = false
     @State var showLanguageOption: Bool = false
+    
     @State var sources: [LanguageRow] = []
+    
+    
+    @State var supportLanguage: [LocaleLanguage] = [.zh_hans]
     @State var headers: [String] = ["key"]
     @State var colmuns: [GridItem] = [GridItem(.flexible())]
     
@@ -136,6 +141,7 @@ struct ContentView: View {
                 } label: {
                     Text("新增文件")
                 }
+                
                 List(targetFiles, id: \.url) { file in
                     HStack {
                         Text(file.url.absoluteString)
@@ -163,6 +169,22 @@ struct ContentView: View {
                     } label: {
                         Text("打印")
                     }
+                    Button {
+                        parserToml()
+                    } label: {
+                        Text("读取toml")
+                    }
+                    Spacer()
+                    Button {
+                        showExportPath = true
+                    } label: {
+                        Text("导出路径")
+                    }
+                    if exportPath.count > 0 {
+                        Text(exportPath)
+                    } else {
+                        Text("未配置导出路径")
+                    }
                 }
                 ScrollView {
                     LazyVGrid(columns: colmuns, alignment: .leading, content: {
@@ -179,12 +201,14 @@ struct ContentView: View {
 //                        Text("example4")
 //                        Text("example5")
                     })
-                    .padding()
+                    
                 }
                 ForEach(supportLanguage) { lang in
 //                    TableColumn(lang, value: \)
                 }
-            }.frame(minWidth: 900)
+            }
+            .padding()
+            .frame(minWidth: 900)
         }
         .padding()
         .sheet(isPresented: $showLanguageOption, content: {
@@ -221,18 +245,48 @@ struct ContentView: View {
 //            targetFiles.append(contentsOf: urls.map { TargetFile(url : $0) })
         }
     }
+    
+    private func parserToml() {
+        let filename = "/Users/spec/Documents/kjxq/gps/active.zh1.toml"
+        do {
+            let toml = try Toml(contentsOfFile: filename)
+            print(toml.description)
+            print("===============")
+//            if let p = toml.table("Parameters") {
+//                print("start")
+//                print(p)
+//                print("end")
+//            }
+            let ep = try Toml(withString: "")
+            ep.set(value: "abc1", for: ["abc1"])
+            ep.set(value: "abc2", for: ["abc2"])
+            ep.set(value: "abc3", for: ["abc3"])
+            ep.set(value: "abc4", for: ["abc4"])
+            toml.updateTable(with: ["Parameters"], toml: ep)
+//            toml.set(value: ep, for: ["Parameters"])
+//            if let p = toml.table("Parameters") {
+//                print("start")
+//                print(p)
+//                print("end")
+//            }
+//            toml.removeTable(from: ["Parameters"])
+            print(toml.description)
+        } catch {
+            print(error)
+        }
+    }
 }
 
 import FileKit
 import Antlr4
-
+ 
 struct LParser {
     
     
  let filename = "/Users/spec/Documents/GitHub/fans/services/admin/api/internal/types/types.go"
     
     func parse() {
-        let textFile = File<String>(path: Path(filename))
+        let textFile = File<String>(path: FPath(filename))
         do {
             let text = try textFile.read()
             print(text)

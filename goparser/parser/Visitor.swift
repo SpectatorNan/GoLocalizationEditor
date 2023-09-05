@@ -117,7 +117,7 @@ class Visitor: GomodelsParserBaseVisitor<VisitorType> {
     }
     
     override func visitNormalField(_ ctx: GomodelsParser.NormalFieldContext) -> VisitorType? {
-        var name = ctx.IDENTIFIER()?.getSymbol()?.expr
+        let name = ctx.IDENTIFIER()?.getSymbol()?.expr
         var dataType: DataType?
         var tagExpr: Expr?
         if let dataCtx = ctx.dataType() {
@@ -141,9 +141,9 @@ class Visitor: GomodelsParserBaseVisitor<VisitorType> {
     
     override func visitAnonymousFiled(_ ctx: GomodelsParser.AnonymousFiledContext) -> VisitorType? {
         var dataType: DataType!
-        guard var name = ctx.IDENTIFIER()?.getSymbol()?.expr else { return nil }
+        guard let name = ctx.IDENTIFIER()?.getSymbol()?.expr else { return nil }
         if let start = ctx.start, let stop = ctx.stop {
-            var star = start.expr
+            let star = start.expr
             
             let startText = start.getText() ?? ""
             let idText = ctx.IDENTIFIER()?.getText() ?? ""
@@ -191,9 +191,9 @@ class Visitor: GomodelsParserBaseVisitor<VisitorType> {
     }
     
     override func visitPointerType(_ ctx: GomodelsParser.PointerTypeContext) -> VisitorType? {
-        guard var name = ctx.IDENTIFIER()?.getSymbol()?.expr else { return nil }
+        guard let name = ctx.IDENTIFIER()?.getSymbol()?.expr else { return nil }
         if let start = ctx.start, let stop = ctx.stop {
-            var star = start.expr
+            let star = start.expr
             
             let startText = start.getText() ?? ""
             let idText = ctx.IDENTIFIER()?.getText() ?? ""
@@ -293,7 +293,6 @@ extension Visitor {
                 fields.append(field)
             }
         }
-        var root = TypeStruct(name: id.expr, docs: [], fields: fields)
-        return root
+        return TypeStruct(name: id.expr, docs: [], fields: fields)
     }
 }

@@ -23,10 +23,7 @@ class GoModelParser {
         
         let visitor = Visitor()
         
-        if let result = modesl.accept(visitor) as? ModelResult {
-            return result
-        }
-        return nil 
+        return modesl.accept(visitor) as? ModelResult
     }
     
 //    static func parser(_ content: String) throws {
