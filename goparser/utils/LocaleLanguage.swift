@@ -21,6 +21,15 @@ extension LocaleLanguage {
             return "英文"
         }
     }
+    
+    var fileName: String {
+        switch self {
+        case .zh_hans:
+            return "active.zh.toml"
+        case .en_US:
+            return "active.en.toml"
+        }
+    }
 }
 
 extension LocaleLanguage: Identifiable {

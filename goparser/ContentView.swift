@@ -8,105 +8,23 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-struct TargetFile {
-    let url: URL
-    
-    static func == (lhs: TargetFile, rhs: TargetFile) -> Bool {
-        return lhs.url == rhs.url
-    }
-}
-
-struct LanguageOptionsView: View {
-    
-    struct Option {
-        var lang: LocaleLanguage
-        var check: Bool
-    }
-    
-    @State var options: [Option]
-    @Binding var show: Bool
-    @Binding var supportLang: [LocaleLanguage]
-    
-    init(langs: Binding<[LocaleLanguage]>, show: Binding<Bool>) {
-        let opts = LocaleLanguage.allCases.map { lang in
-            Option(lang: lang, check: langs.wrappedValue.contains(lang))
-        }
-        self.options = opts
-        self._show = show
-        self._supportLang = langs
-    }
-    
-    var body: some View {
-        VStack {
-            ScrollView(.vertical) {
-                LazyVStack(alignment: .leading, content: {
-                    ForEach($options, id: \.lang) { opt in
-                        Toggle(opt.lang.wrappedValue.showName, isOn: opt.check)
-                    }
-                })
-            }
-            HStack {
-                Button {
-                    supportLang = options.filter { $0.check }.map { $0.lang }
-                    show = false
-                } label: {
-                    Text("确定")
-                }
-
-                Button {
-                    show = false
-                } label: {
-                    Text("取消")
-                }
-            }
-        }.padding()
-    }
-}
-
-class LanguageRow {
-    var name: String
-    var values: [LocaleLanguage: String]
-    
-    init(name: String, values: [LocaleLanguage : String]) {
-        self.name = name
-        self.values = values
-    }
-}
-extension LanguageRow: Identifiable {
-    var id: String {
-        name
-    }
-    
-     func binding(for key: LocaleLanguage) -> Binding<String> {
-        return Binding<String>(
-            get: {
-                self.values[key] ?? ""
-            },
-            set: {
-                self.values[key] = $0
-            }
-        )
-    }
-}
-extension LanguageRow: CustomStringConvertible {
-    var description: String {
-        var str = ""
-        str += "name: \(name)\n"
-        str += "values: \n"
-        for (k, v) in values {
-            str += "\t\(k): \(v)\n"
-        }
-        return str
-    }
-}
-
-
 struct ContentView: View {
     
     @State var targetFiles: [TargetFile] = []
     @State var exportPath: String = ""
+    @State var configExportPath: Bool = false
     
-    @State var showExportPath: Bool = false
+    @State var exportPathErrMsg: String = ""
+    var exportPathErrMsgShow: Binding<Bool> {
+        Binding<Bool> {
+            return !exportPathErrMsg.isEmpty
+        } set: { newValue, trans in
+            if !newValue {
+                exportPathErrMsg = ""
+            }
+        }
+
+    }
     @State var showLanguageOption: Bool = false
     
     @State var sources: [LanguageRow] = []
@@ -170,13 +88,13 @@ struct ContentView: View {
                         Text("打印")
                     }
                     Button {
-                        parserToml()
+                        loadToml()
                     } label: {
                         Text("读取toml")
                     }
                     Spacer()
                     Button {
-                        showExportPath = true
+                         configExportPath = true
                     } label: {
                         Text("导出路径")
                     }
@@ -214,6 +132,12 @@ struct ContentView: View {
         .sheet(isPresented: $showLanguageOption, content: {
             LanguageOptionsView(langs: $supportLanguage, show: $showLanguageOption)
         })
+        .sheet(isPresented: exportPathErrMsgShow, content: {
+            errorAlert()
+        })
+        .sheet(isPresented: $configExportPath, content: {
+            configExportPathView()
+        })
         .onChange(of: supportLanguage) { newValue in
             print("support language change")
             refreshColumns()
@@ -246,7 +170,66 @@ struct ContentView: View {
         }
     }
     
-    private func parserToml() {
+    @ViewBuilder
+    private func configExportPathView() -> some View {
+        VStack(alignment:.leading, spacing: 20) {
+            Text("导出路径")
+            TextField("请输入导出路径", text: $exportPath)
+                .frame(width: 200)
+            Button {
+                configExportPath = false
+            } label: {
+                Text("确定")
+            }
+        }.padding()
+    
+    }
+    
+    @ViewBuilder
+    private func errorAlert() -> some View {
+        VStack {
+            Text(exportPathErrMsg)
+            Button {
+                exportPathErrMsg = ""
+            } label: {
+                Text("确定")
+            }
+        }.padding()
+    }
+    
+    private func loadToml() {
+        if exportPath.isEmpty {
+            exportPathErrMsg = "导出路径不能为空"
+            return
+        }
+        let dirPath = FPath(exportPath)
+        if !dirPath.isDirectory {
+            exportPathErrMsg = "导出路径不是文件夹"
+            return
+        }
+        
+        for language in supportLanguage {
+            let filePath = dirPath + language.fileName
+            if filePath.exists {
+                readLocalizationFile(fileName: filePath)
+            }
+        }
+    }
+    
+    private func readLocalizationFile(fileName: FPath) {
+        do {
+            let toml = try Toml(contentsOfFile: fileName.rawValue)
+                        if let p = toml.table("Parameters") {
+                            print("start")
+                            print(p)
+                            print("end")
+                        }
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func stpparserToml() {
         let filename = "/Users/spec/Documents/kjxq/gps/active.zh1.toml"
         do {
             let toml = try Toml(contentsOfFile: filename)
