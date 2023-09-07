@@ -522,7 +522,7 @@ open class GomodelsParser: Parser {
 
 	public class TypeBlockStructContext: ParserRuleContext {
 			open
-            func IDENTIFIER() -> TerminalNode? {
+			func IDENTIFIER() -> TerminalNode? {
 				return getToken(GomodelsParser.Tokens.IDENTIFIER.rawValue, 0)
 			}
 			open
@@ -538,7 +538,7 @@ open class GomodelsParser: Parser {
 				return getToken(GomodelsParser.Tokens.R_CURLY.rawValue, 0)
 			}
 			open
-            func fieldDecl() -> [FieldDeclContext] {
+			func fieldDecl() -> [FieldDeclContext] {
 				return getRuleContexts(FieldDeclContext.self)
 			}
 			open
@@ -901,7 +901,7 @@ open class GomodelsParser: Parser {
 		return _localctx
 	}
 
-    public class TypeStructContext: ParserRuleContext {
+	public class TypeStructContext: ParserRuleContext {
 			open
 			func IDENTIFIER() -> TerminalNode? {
 				return getToken(GomodelsParser.Tokens.IDENTIFIER.rawValue, 0)
@@ -1072,7 +1072,7 @@ open class GomodelsParser: Parser {
 	}
 
 	public class NormalFieldContext: ParserRuleContext {
-            open var tag: Token!
+		open var tag: Token!
 			open
 			func IDENTIFIER() -> TerminalNode? {
 				return getToken(GomodelsParser.Tokens.IDENTIFIER.rawValue, 0)
@@ -1413,16 +1413,16 @@ open class GomodelsParser: Parser {
 
 	public class MapTypeContext: ParserRuleContext {
 			open
-			func IDENTIFIER() -> [TerminalNode] {
-				return getTokens(GomodelsParser.Tokens.IDENTIFIER.rawValue)
-			}
-			open
-			func IDENTIFIER(_ i:Int) -> TerminalNode? {
-				return getToken(GomodelsParser.Tokens.IDENTIFIER.rawValue, i)
+			func MAP() -> TerminalNode? {
+				return getToken(GomodelsParser.Tokens.MAP.rawValue, 0)
 			}
 			open
 			func L_BRACKET() -> TerminalNode? {
 				return getToken(GomodelsParser.Tokens.L_BRACKET.rawValue, 0)
+			}
+			open
+			func IDENTIFIER() -> TerminalNode? {
+				return getToken(GomodelsParser.Tokens.IDENTIFIER.rawValue, 0)
 			}
 			open
 			func R_BRACKET() -> TerminalNode? {
@@ -1472,7 +1472,7 @@ open class GomodelsParser: Parser {
 		do {
 		 	try enterOuterAlt(_localctx, 1)
 		 	setState(142)
-		 	try match(GomodelsParser.Tokens.IDENTIFIER.rawValue)
+		 	try match(GomodelsParser.Tokens.MAP.rawValue)
 		 	setState(143)
 		 	try match(GomodelsParser.Tokens.L_BRACKET.rawValue)
 		 	setState(144)
@@ -1871,13 +1871,13 @@ open class GomodelsParser: Parser {
 		3,34,17,0,133,138,3,36,18,0,134,138,3,38,19,0,135,138,3,30,15,0,136,138,
 		3,20,10,0,137,130,1,0,0,0,137,131,1,0,0,0,137,132,1,0,0,0,137,133,1,0,
 		0,0,137,134,1,0,0,0,137,135,1,0,0,0,137,136,1,0,0,0,138,29,1,0,0,0,139,
-		140,5,63,0,0,140,141,5,28,0,0,141,31,1,0,0,0,142,143,5,28,0,0,143,144,
-		5,33,0,0,144,145,5,28,0,0,145,146,5,34,0,0,146,147,3,28,14,0,147,33,1,
-		0,0,0,148,149,5,33,0,0,149,150,5,34,0,0,150,151,3,28,14,0,151,35,1,0,0,
-		0,152,153,5,4,0,0,153,154,5,31,0,0,154,155,5,32,0,0,155,37,1,0,0,0,156,
-		157,5,27,0,0,157,39,1,0,0,0,158,159,5,14,0,0,159,160,5,28,0,0,160,41,1,
-		0,0,0,161,162,7,0,0,0,162,43,1,0,0,0,14,47,54,59,67,74,82,89,97,101,111,
-		118,123,126,137
+		140,5,63,0,0,140,141,5,28,0,0,141,31,1,0,0,0,142,143,5,9,0,0,143,144,5,
+		33,0,0,144,145,5,28,0,0,145,146,5,34,0,0,146,147,3,28,14,0,147,33,1,0,
+		0,0,148,149,5,33,0,0,149,150,5,34,0,0,150,151,3,28,14,0,151,35,1,0,0,0,
+		152,153,5,4,0,0,153,154,5,31,0,0,154,155,5,32,0,0,155,37,1,0,0,0,156,157,
+		5,27,0,0,157,39,1,0,0,0,158,159,5,14,0,0,159,160,5,28,0,0,160,41,1,0,0,
+		0,161,162,7,0,0,0,162,43,1,0,0,0,14,47,54,59,67,74,82,89,97,101,111,118,
+		123,126,137
 	]
 
 	public

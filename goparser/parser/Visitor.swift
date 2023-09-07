@@ -212,8 +212,8 @@ class Visitor: GomodelsParserBaseVisitor<VisitorType> {
     
     override func visitMapType(_ ctx: GomodelsParser.MapTypeContext) -> VisitorType? {
         guard
-            let mapToken  = ctx.IDENTIFIER(0)?.getSymbol(),
-            let key = ctx.IDENTIFIER(1)?.getSymbol()?.expr,
+            let mapToken  = ctx.MAP()?.getSymbol(),
+            let key = ctx.IDENTIFIER()?.getSymbol()?.expr,
             let lbrack = ctx.L_BRACKET()?.getSymbol()?.expr,
             let rbrack = ctx.R_BRACKET()?.getSymbol()?.expr,
             let dataType = ctx.dataType(), let value = accept(dataType)
