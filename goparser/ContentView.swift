@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import UniformTypeIdentifiers
+import FileKit
 
 struct ContentView: View {
     
@@ -23,11 +23,12 @@ struct ContentView: View {
                 exportPathErrMsg = ""
             }
         }
-
     }
     @State var showLanguageOption: Bool = false
     
-    @State var sources: [LanguageRow] = []
+//    @State var sources: [LanguageRow] = []
+    
+    @State var rootSources: [String: [LocaleLanguage: String]] = [:]
     
     
     @State var supportLanguage: [LocaleLanguage] = [.zh_hans]
@@ -47,6 +48,33 @@ struct ContentView: View {
              let txt = value.binding(for: lang)
             TextField("", text: txt).id(value.name+lang.id)
         }
+    }
+    
+    @ViewBuilder
+    func tableRow(_ dic: [String: [LocaleLanguage: String]].Element) -> some View {
+        Text(dic.key)
+        ForEach(supportLanguage) { lang in
+//             let txt = value.binding(for: lang)
+            let txt = bindingSource(for: dic.key, lang)//$rootSources[dic.key][lang]
+            TextField(lang.placeholder, text: txt).id(dic.key+lang.id)
+        }
+    }
+    
+    func bindingSource(for key: String, _ lang: LocaleLanguage) -> Binding<String> {
+        return Binding<String>(
+            get: {
+                rootSources[key]?[lang] ?? ""
+            },
+            set: {
+                if var dic = rootSources[key] {
+                    dic[lang] = $0
+                    rootSources[key] = dic
+                } else {
+                    rootSources[key] = [lang: $0]
+                }
+                
+            }
+        )
     }
     
      
@@ -72,6 +100,7 @@ struct ContentView: View {
                     }
                 }
             }.frame(width: 300)
+            let sources = Array(rootSources)
             VStack(alignment:.leading, spacing: 10) {
                 HStack {
                     Button {
@@ -110,7 +139,8 @@ struct ContentView: View {
 //                            Text(header)
 //                        }
                         tableHeader
-                        ForEach(sources) { lrow in
+                        ForEach(sources.sorted(by: { $0.key < $1.key }), id: \.key) { lrow in
+                            
                             tableRow(lrow)
                         }
 //                        Text("example1")
@@ -144,9 +174,9 @@ struct ContentView: View {
         }
         .onAppear(perform: {
             refreshColumns()
-            for i in 0..<6 {
-                sources.append(LanguageRow(name: "example\(i)", values: [:]))
-            }
+//            for i in 0..<6 {
+//                sources.append(LanguageRow(name: "example\(i)", values: [:]))
+//            }
         })
     }
     
@@ -170,12 +200,32 @@ struct ContentView: View {
         }
     }
     
+    private func selectExportPath() {
+        if let urls = Pannel.selectFloder(createDirectories: true) {
+            print(urls)
+            if let url = urls.first {
+              
+                if let target = FPath(url: url), target.isDirectory {
+                   exportPath = target.rawValue
+                }
+            }
+//            targetFiles.append(contentsOf: urls.map { TargetFile(url : $0) })
+        }
+    }
+    
     @ViewBuilder
     private func configExportPathView() -> some View {
         VStack(alignment:.leading, spacing: 20) {
             Text("导出路径")
-            TextField("请输入导出路径", text: $exportPath)
-                .frame(width: 200)
+            HStack {
+                TextField("请输入导出路径", text: $exportPath)
+                    .frame(width: 200)
+                Button {
+                    selectExportPath()
+                } label: {
+                    Text("选择文件夹")
+                }
+            }
             Button {
                 configExportPath = false
             } label: {
@@ -207,26 +257,96 @@ struct ContentView: View {
             exportPathErrMsg = "导出路径不是文件夹"
             return
         }
+        var fieldNames: Set<String> = []
+        for targetFile in targetFiles {
+            if let path = FPath(url:targetFile.url), path.exists {
+                let textFile = File<String>(path: path)
+                do {
+                    let text = try textFile.read()
+                    if let result = try GoModelParser.parser(text) {
+//                        modelResults.append(result)
+                        for model in result.models {
+                            if let model = model as? TypeStruct {
+                                if model.name.text == "GetDefaultRegisterInfoResp" {
+                                    print()
+                                }
+                                for field in model.fields {
+                                    
+                                    if field.name.text == "string" {
+                                        print()
+                                    }
+                                    fieldNames.insert(field.name.text)
+                                }
+                            }
+                        }
+                    }
+                } catch { print(error) }
+            }
+        }
+//        for fieldName in fieldNames {
+//            if var dic = rootSources[fieldName] {
+//                dic[language] = ""
+//            } else {
+//                rootSources[fieldName] = [language: ""]
+//            }
+//        }
+        for fieldName in fieldNames {
+            for language in supportLanguage {
+                let filePath = dirPath + language.fileName
+                if filePath.exists {
+                 let toml = readLocalizationFile(fileName: filePath)
+                    if let table = toml.table("Parameters") {
+                        do {
+                            if let trans: String = try table.fetch(fieldName) {
+                                if var dic = rootSources[fieldName] {
+                                    dic[language] = trans
+                                } else {
+                                    rootSources[fieldName] = [language: trans]
+                                }
+                                continue
+                            }
+                            
+                        } catch { print(error) }
+                    }
+                }
+                print("not load exists localization file, language: \(language), filedName: \(fieldName)")
+                if var dic = rootSources[fieldName] {
+                    dic[language] = ""
+                } else {
+                    rootSources[fieldName] = [language: ""]
+                }
+            }
+        }
         
         for language in supportLanguage {
             let filePath = dirPath + language.fileName
             if filePath.exists {
-                readLocalizationFile(fileName: filePath)
+             let toml = readLocalizationFile(fileName: filePath)
+                if let table = toml.table("Parameters") {
+                    
+                }
+                
             }
         }
     }
     
-    private func readLocalizationFile(fileName: FPath) {
+    private func readGoFile(filePath: String) {
+        
+    }
+    
+    private func readLocalizationFile(fileName: FPath) -> Toml {
         do {
             let toml = try Toml(contentsOfFile: fileName.rawValue)
-                        if let p = toml.table("Parameters") {
-                            print("start")
-                            print(p)
-                            print("end")
-                        }
+//                        if let p = toml.table("Parameters") {
+//                            print("start")
+//                            print(p)
+//                            print("end")
+//                        }
+            return toml
         } catch {
             print(error)
         }
+        return try! Toml(withString: "")
     }
     
     private func stpparserToml() {
@@ -260,7 +380,7 @@ struct ContentView: View {
     }
 }
 
-import FileKit
+
 import Antlr4
  
 struct LParser {
@@ -300,10 +420,7 @@ struct LParser {
     }
     
 }
-
-struct GoParserResult {
-
-}
+ 
 //turbo2pay@gmail.com
 //Qaz123456.
 //Jason1158998.

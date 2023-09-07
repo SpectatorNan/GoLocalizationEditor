@@ -30,6 +30,15 @@ extension LocaleLanguage {
             return "active.en.toml"
         }
     }
+    
+    var placeholder: String {
+        switch self {
+        case .zh_hans:
+            return "中文"
+        case .en_US:
+            return "English"
+        }
+    }
 }
 
 extension LocaleLanguage: Identifiable {

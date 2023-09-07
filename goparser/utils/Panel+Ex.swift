@@ -16,13 +16,19 @@ class Pannel {
         return open(chooseFiles: true, chooseDirectories: false, createDirectories: createDirectories, multipleSelection: multipleSelection, allowFileTypes: allowFileTypes)
     }
     
+    static func selectFloder(createDirectories: Bool = false) -> [URL]? {
+        return open(chooseFiles: false, chooseDirectories: true, createDirectories: createDirectories, multipleSelection: false, allowFileTypes: [])
+    }
+    
     static func open(chooseFiles: Bool, chooseDirectories: Bool, createDirectories: Bool, multipleSelection: Bool, allowFileTypes: [String]) -> [URL]? {
         let panel = NSOpenPanel()
         panel.canChooseFiles = chooseFiles
         panel.canChooseDirectories = chooseDirectories
         panel.allowsMultipleSelection = multipleSelection
         panel.canCreateDirectories = createDirectories
-        panel.allowedFileTypes = allowFileTypes
+        if allowFileTypes.count > 0 {
+            panel.allowedFileTypes = allowFileTypes
+        }
 //        panel.allowedContentTypes = [UTType(tag: "go", tagClass: UTTagClass.filenameExtension, conformingTo: nil)!]
         let result = panel.runModal()
         if result == .OK {
