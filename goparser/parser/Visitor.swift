@@ -143,7 +143,7 @@ class Visitor: GomodelsParserBaseVisitor<VisitorType> {
         var dataType: DataType!
         guard let name = ctx.IDENTIFIER()?.getSymbol()?.expr else { return nil }
         if let start = ctx.start, let stop = ctx.stop {
-            let star = start.expr
+//            let star = start.expr
             
             let startText = start.getText() ?? ""
             let idText = ctx.IDENTIFIER()?.getText() ?? ""
@@ -193,7 +193,7 @@ class Visitor: GomodelsParserBaseVisitor<VisitorType> {
     override func visitPointerType(_ ctx: GomodelsParser.PointerTypeContext) -> VisitorType? {
         guard let name = ctx.IDENTIFIER()?.getSymbol()?.expr else { return nil }
         if let start = ctx.start, let stop = ctx.stop {
-            let star = start.expr
+//            let star = start.expr
             
             let startText = start.getText() ?? ""
             let idText = ctx.IDENTIFIER()?.getText() ?? ""

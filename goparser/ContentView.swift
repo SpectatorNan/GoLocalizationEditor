@@ -30,6 +30,8 @@ struct ContentView: View {
     
     @State var rootSources: [String: [LocaleLanguage: String]] = [:]
     
+    @State var tomlSources: [LocaleLanguage: Toml] = [:]
+    
     
     @State var supportLanguage: [LocaleLanguage] = [.zh_hans]
     @State var headers: [String] = ["key"]
@@ -120,6 +122,11 @@ struct ContentView: View {
                         loadToml()
                     } label: {
                         Text("读取toml")
+                    }
+                    Button {
+                        export()
+                    } label: {
+                        Text("导出")
                     }
                     Spacer()
                     Button {
@@ -213,6 +220,44 @@ struct ContentView: View {
         }
     }
     
+    private func export() {
+        do {
+            
+            for language in supportLanguage {
+                var pToml = try Toml(withString: "")
+                for source in rootSources {
+                    pToml.set(value: source.value[language] ?? "", for: [source.key])
+                }
+                if let toml = tomlSources[language] {
+                    toml.updateTable(with: ["Parameters"], toml: pToml)
+                    tomlSources[language] = toml
+                } else {
+                    let root = try Toml(withString: "")
+                    root.updateTable(with: ["Parameters"], toml: pToml)
+                    tomlSources[language] = root
+                }
+                let filePath = FPath(exportPath) + language.fileName
+                if filePath.exists {
+                
+                }
+                let textFile = TextFile(path: filePath)
+                try tomlSources[language]!.description |> textFile
+            }
+            
+//            for toml in tomlSources {
+//                var pToml = try Toml(withString: "")
+//                for source in rootSources {
+//                    pToml.set(value: source.value[toml.key] ?? "", for: [source.key])
+//                }
+//                toml.value.updateTable(with: ["Parameters"], toml: pToml)
+//                print(toml.value)
+//                print("==========")
+//                print(tomlSources[toml.key])
+//                tomlSources[toml.key] = toml.value
+//            }
+        } catch { print(error) }
+    }
+    
     @ViewBuilder
     private func configExportPathView() -> some View {
         VStack(alignment:.leading, spacing: 20) {
@@ -295,6 +340,7 @@ struct ContentView: View {
                 let filePath = dirPath + language.fileName
                 if filePath.exists {
                  let toml = readLocalizationFile(fileName: filePath)
+                    tomlSources[language] = toml
                     if let table = toml.table("Parameters") {
                         do {
                             if let trans: String = try table.fetch(fieldName) {
@@ -318,16 +364,17 @@ struct ContentView: View {
             }
         }
         
-        for language in supportLanguage {
-            let filePath = dirPath + language.fileName
-            if filePath.exists {
-             let toml = readLocalizationFile(fileName: filePath)
-                if let table = toml.table("Parameters") {
-                    
-                }
-                
-            }
-        }
+//        for language in supportLanguage {
+//            let filePath = dirPath + language.fileName
+//            if filePath.exists {
+//             let toml = readLocalizationFile(fileName: filePath)
+//                tomlSources[language] = toml
+//                if let table = toml.table("Parameters") {
+//                    
+//                }
+//                
+//            }
+//        }
     }
     
     private func readGoFile(filePath: String) {

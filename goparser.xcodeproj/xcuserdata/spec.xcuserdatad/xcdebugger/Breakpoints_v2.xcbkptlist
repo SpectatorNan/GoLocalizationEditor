@@ -14,8 +14,8 @@
             filePath = "goparser/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "loadToml()"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "goparser/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "loadToml()"
             landmarkType = "7">
             <Locations>
@@ -103,185 +103,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B71DD804-D75C-4332-AD40-CDF6DB3E2F7A"
+            uuid = "949DF4C2-DDED-449D-8CEB-62D4C24FED29"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "goparser/parser/Visitor.swift"
+            filePath = "goparser/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "visitFieldDecl(_:)"
+            startingLineNumber = "423"
+            endingLineNumber = "423"
+            landmarkName = "stpparserToml()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B71DD804-D75C-4332-AD40-CDF6DB3E2F7A - ff43d11730d84a70"
+                  uuid = "949DF4C2-DDED-449D-8CEB-62D4C24FED29 - f5a6901636bafcd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitFieldDecl(goparser.GomodelsParser.FieldDeclContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
+                  symbolName = "goparser.LParser.parse() -&gt; ()"
                   moduleName = "goparser"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "274">
+                  startingLineNumber = "423"
+                  endingLineNumber = "423"
+                  offsetFromSymbolStart = "884">
                </Location>
                <Location
-                  uuid = "B71DD804-D75C-4332-AD40-CDF6DB3E2F7A - ff43d11730d84a70"
+                  uuid = "949DF4C2-DDED-449D-8CEB-62D4C24FED29 - f5a6901636bafcd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitFieldDecl(goparser.GomodelsParser.FieldDeclContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
+                  symbolName = "goparser.LParser.parse() -&gt; ()"
                   moduleName = "goparser"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "B71DD804-D75C-4332-AD40-CDF6DB3E2F7A - ff43d11730d84a70"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitFieldDecl(goparser.GomodelsParser.FieldDeclContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "B71DD804-D75C-4332-AD40-CDF6DB3E2F7A - ff43d11730d84bf4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitFieldDecl(goparser.GomodelsParser.FieldDeclContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "119">
-               </Location>
-               <Location
-                  uuid = "B71DD804-D75C-4332-AD40-CDF6DB3E2F7A - ff43d11730d84bf4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitFieldDecl(goparser.GomodelsParser.FieldDeclContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "167">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9165989B-1B4B-4ADE-936C-F7E0A8C72294"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "goparser/parser/Visitor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "visitAnonymousFiled(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9165989B-1B4B-4ADE-936C-F7E0A8C72294 - c358b66ba495f40f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitAnonymousFiled(goparser.GomodelsParser.AnonymousFiledContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "1104">
-               </Location>
-               <Location
-                  uuid = "9165989B-1B4B-4ADE-936C-F7E0A8C72294 - c358b66ba495f40f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitAnonymousFiled(goparser.GomodelsParser.AnonymousFiledContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "1246">
-               </Location>
-               <Location
-                  uuid = "9165989B-1B4B-4ADE-936C-F7E0A8C72294 - c358b66ba495f40f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitAnonymousFiled(goparser.GomodelsParser.AnonymousFiledContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "1404">
-               </Location>
-               <Location
-                  uuid = "9165989B-1B4B-4ADE-936C-F7E0A8C72294 - c358b66ba495f4e8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitAnonymousFiled(goparser.GomodelsParser.AnonymousFiledContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "359">
-               </Location>
-               <Location
-                  uuid = "9165989B-1B4B-4ADE-936C-F7E0A8C72294 - c358b66ba495f42e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "goparser.Visitor.visitAnonymousFiled(goparser.GomodelsParser.AnonymousFiledContext) -&gt; Swift.Optional&lt;goparser.DataType&gt;"
-                  moduleName = "goparser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/parser/Visitor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "144"
-                  endingLineNumber = "144"
-                  offsetFromSymbolStart = "359">
+                  startingLineNumber = "423"
+                  endingLineNumber = "423"
+                  offsetFromSymbolStart = "1060">
                </Location>
             </Locations>
          </BreakpointContent>
