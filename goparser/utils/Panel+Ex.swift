@@ -12,7 +12,7 @@ import UniformTypeIdentifiers
 
 class Pannel {
     
-    static func openFiles(createDirectories: Bool = false, multipleSelection: Bool = false, allowFileTypes: [String]) -> [URL]? {
+    static func openFiles(createDirectories: Bool = true, multipleSelection: Bool = false, allowFileTypes: [String]) -> [URL]? {
         return open(chooseFiles: true, chooseDirectories: false, createDirectories: createDirectories, multipleSelection: multipleSelection, allowFileTypes: allowFileTypes)
     }
     

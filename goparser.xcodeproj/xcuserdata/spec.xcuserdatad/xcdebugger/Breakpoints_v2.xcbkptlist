@@ -14,8 +14,8 @@
             filePath = "goparser/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "321"
-            endingLineNumber = "321"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
             landmarkName = "loadToml()"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "goparser/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "loadToml()"
             landmarkType = "7">
             <Locations>
@@ -110,8 +110,8 @@
             filePath = "goparser/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "423"
-            endingLineNumber = "423"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "stpparserToml()"
             landmarkType = "7">
             <Locations>
@@ -144,6 +144,86 @@
                   startingLineNumber = "423"
                   endingLineNumber = "423"
                   offsetFromSymbolStart = "1060">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF0BA41A-31D2-48D6-B95E-3F76D7B368D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/views/Commands.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5FC6D2C-99E6-4F45-9D1F-4C4FA9039107"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/utils/Cache/ProjectCache.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "saveProject(name:project:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59F4ED60-00EB-42F5-ADE8-8A07EFD2EF87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "goparser/views/ContentView/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
+            landmarkName = "loadToml()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59F4ED60-00EB-42F5-ADE8-8A07EFD2EF87 - 56cd4da6c8010c49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "goparser.ContentView.loadToml() -&gt; ()"
+                  moduleName = "goparser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/views/ContentView/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "380"
+                  endingLineNumber = "380"
+                  offsetFromSymbolStart = "4974">
+               </Location>
+               <Location
+                  uuid = "59F4ED60-00EB-42F5-ADE8-8A07EFD2EF87 - 56cd4da6c8010c49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "goparser.ContentView.loadToml() -&gt; ()"
+                  moduleName = "goparser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/spec/Documents/GitHub/goparser/goparser/views/ContentView/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "380"
+                  endingLineNumber = "380"
+                  offsetFromSymbolStart = "4705">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TargetFile {
+struct TargetFile: Codable {
     let url: URL
     
     static func == (lhs: TargetFile, rhs: TargetFile) -> Bool {
