@@ -32,9 +32,9 @@ struct ContentView: View {
     @State var showLanguageOption: Bool = false
     
     //    @State var sources: [LanguageRow] = []
-    
+    // translate show content
     @State var rootSources: [String: [LocaleLanguage: String]] = [:]
-    
+    // load file content
     @State var tomlSources: [LocaleLanguage: Toml] = [:]
     
     
@@ -98,6 +98,7 @@ struct ContentView: View {
                     Button {
                         //                    LParser().parse()
                         showLanguageOption.toggle()
+                        loadToml(overrideInputSource: true)
                     } label: {
                         Text("语种")
                     }
@@ -109,11 +110,12 @@ struct ContentView: View {
                         Text("打印")
                     }
                     Button {
-                        loadToml()
+                        loadToml(overrideInputSource: true)
                     } label: {
                         Text("读取toml")
                     }
                     Button {
+                        loadToml(overrideInputSource: false)
                         export()
                     } label: {
                         Text("导出")
@@ -237,18 +239,7 @@ struct ContentView: View {
                 let textFile = TextFile(path: filePath)
                 try tomlSources[language]!.description |> textFile
             }
-            
-            //            for toml in tomlSources {
-            //                var pToml = try Toml(withString: "")
-            //                for source in rootSources {
-            //                    pToml.set(value: source.value[toml.key] ?? "", for: [source.key])
-            //                }
-            //                toml.value.updateTable(with: ["Parameters"], toml: pToml)
-            //                print(toml.value)
-            //                print("==========")
-            //                print(tomlSources[toml.key])
-            //                tomlSources[toml.key] = toml.value
-            //            }
+             
         } catch { print(error) }
     }
     
@@ -331,7 +322,7 @@ struct ContentView: View {
         }.padding()
     }
     
-    private func loadToml() {
+    private func loadToml(overrideInputSource: Bool) {
         if exportPath.isEmpty {
             exportPathErrMsg = "导出路径不能为空"
             return
@@ -348,17 +339,9 @@ struct ContentView: View {
                 do {
                     let text = try textFile.read()
                     if let result = try GoModelParser.parser(text) {
-                        //                        modelResults.append(result)
                         for model in result.models {
                             if let model = model as? TypeStruct {
-                                if model.name.text == "GetDefaultRegisterInfoResp" {
-                                    print()
-                                }
                                 for field in model.fields {
-                                    
-                                    if field.name.text == "string" {
-                                        print()
-                                    }
                                     fieldNames.insert(field.name.text)
                                 }
                             }
@@ -367,55 +350,37 @@ struct ContentView: View {
                 } catch { print(error) }
             }
         }
-        //        for fieldName in fieldNames {
-        //            if var dic = rootSources[fieldName] {
-        //                dic[language] = ""
-        //            } else {
-        //                rootSources[fieldName] = [language: ""]
-        //            }
-        //        }
         
         for language in supportLanguage {
             let filePath = dirPath + language.fileName
             if filePath.exists {
                 let toml = readLocalizationFile(fileName: filePath)
                 tomlSources[language] = toml
-                if let table = toml.table("Parameters") {
-                    do {
-                        for fieldName in fieldNames {
-                            if let trans: String = try table.fetch(fieldName) {
-                                if var dic = rootSources[fieldName] {
-                                    dic[language] = trans
+                if overrideInputSource {
+                    if let table = toml.table("Parameters") {
+                        do {
+                            for fieldName in fieldNames {
+                                if let trans: String = try table.fetch(fieldName) {
+                                    if var dic = rootSources[fieldName] {
+                                        dic[language] = trans
+                                        rootSources[fieldName] = dic
+                                    } else {
+                                        rootSources[fieldName] = [language: trans]
+                                    }
+                                    //                                continue
+                                } else if var dic = rootSources[fieldName] {
+                                    dic[language] = ""
                                     rootSources[fieldName] = dic
                                 } else {
-                                    rootSources[fieldName] = [language: trans]
+                                    rootSources[fieldName] = [language: ""]
                                 }
-//                                continue
-                            } else if var dic = rootSources[fieldName] {
-                                dic[language] = ""
-                                rootSources[fieldName] = dic
-                            } else {
-                                rootSources[fieldName] = [language: ""]
                             }
-                        }
-                    } catch { print(error) }
+                        } catch { print(error) }
+                    }
                 }
             }
-            //                print("not load exists localization file, language: \(language), filedName: \(fieldName)")
             
         }
-        
-        //        for language in supportLanguage {
-        //            let filePath = dirPath + language.fileName
-        //            if filePath.exists {
-        //             let toml = readLocalizationFile(fileName: filePath)
-        //                tomlSources[language] = toml
-        //                if let table = toml.table("Parameters") {
-        //
-        //                }
-        //
-        //            }
-        //        }
     }
     
     private func readGoFile(filePath: String) {
