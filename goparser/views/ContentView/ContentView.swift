@@ -11,6 +11,26 @@ import FileKit
 
 struct ContentView: View {
     
+    var body: some View {
+        
+        NavigationSplitView{
+            List {
+                NavigationLink {
+                    
+                } label: {
+                    Image(systemName: "questionmark.circle")
+                    Text("errors")
+                }
+
+            }
+        } detail: {
+            Text("Selected an menu")
+        }
+    }
+}
+
+struct ContentView1: View {
+    
     
     
     @State var targetFiles: [TargetFile] = []

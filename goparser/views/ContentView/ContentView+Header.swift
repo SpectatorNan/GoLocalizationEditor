@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension ContentView {
+extension ContentView1 {
     var tableHeader: some View {
         ForEach(headers, id: \.self) { header in
             Text(header)

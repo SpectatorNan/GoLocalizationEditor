@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76C6A5212C6FC78400334E1D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6A5202C6FC78400334E1D /* Project.swift */; };
+		76C6A5242C706D3800334E1D /* ErrorTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6A5232C706D2700334E1D /* ErrorTranslateView.swift */; };
 		E21AF95C2A7B965B00E33912 /* goparserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF95B2A7B965B00E33912 /* goparserApp.swift */; };
 		E21AF95E2A7B965B00E33912 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21AF95D2A7B965B00E33912 /* ContentView.swift */; };
 		E21AF9602A7B966400E33912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21AF95F2A7B966400E33912 /* Assets.xcassets */; };
@@ -84,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76C6A5202C6FC78400334E1D /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		76C6A5232C706D2700334E1D /* ErrorTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTranslateView.swift; sourceTree = "<group>"; };
 		E21AF9582A7B965B00E33912 /* goparser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goparser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21AF95B2A7B965B00E33912 /* goparserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goparserApp.swift; sourceTree = "<group>"; };
 		E21AF95D2A7B965B00E33912 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76C6A51C2C6FC64300334E1D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E21AF95B2A7B965B00E33912 /* goparserApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		76C6A51F2C6FC73B00334E1D /* db */ = {
+			isa = PBXGroup;
+			children = (
+				76C6A5202C6FC78400334E1D /* Project.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		76C6A5222C706CF600334E1D /* errorTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				76C6A5232C706D2700334E1D /* ErrorTranslateView.swift */,
+			);
+			path = errorTranslate;
+			sourceTree = "<group>";
+		};
 		E21AF94F2A7B965B00E33912 = {
 			isa = PBXGroup;
 			children = (
@@ -196,17 +224,18 @@
 		E21AF95A2A7B965B00E33912 /* goparser */ = {
 			isa = PBXGroup;
 			children = (
+				76C6A51F2C6FC73B00334E1D /* db */,
 				E26161212AA8CDDB00A30A84 /* models */,
 				E261611E2AA8CD9600A30A84 /* views */,
 				E29247CA2A9B09AA008C5F70 /* Info.plist */,
 				E21AF9C72A8CB91F00E33912 /* parser */,
 				E21AF9BA2A823E9400E33912 /* utils */,
 				E21AF9AD2A8131CF00E33912 /* antlr */,
-				E21AF95B2A7B965B00E33912 /* goparserApp.swift */,
 				E21AF95F2A7B966400E33912 /* Assets.xcassets */,
 				E21AF9642A7B966400E33912 /* goparser.entitlements */,
 				E21AF9612A7B966400E33912 /* Preview Content */,
 				E21AF98E2A7E1F8900E33912 /* Assistant.swift */,
+				76C6A51C2C6FC64300334E1D /* Main */,
 			);
 			path = goparser;
 			sourceTree = "<group>";
@@ -289,6 +318,7 @@
 		E261611E2AA8CD9600A30A84 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				76C6A5222C706CF600334E1D /* errorTranslate */,
 				E26161352AB9990400A30A84 /* ContentView */,
 				E261611F2AA8CDA900A30A84 /* LanguageOptionsView.swift */,
 				E26161332AB6ED1F00A30A84 /* Commands.swift */,
@@ -511,6 +541,7 @@
 				E29247E52AA1D2D4008C5F70 /* Grammar.swift in Sources */,
 				E2E779732A93B76C00AB3F16 /* ModelResult.swift in Sources */,
 				E21AF9C92A8CB97700E33912 /* parser.swift in Sources */,
+				76C6A5242C706D3800334E1D /* ErrorTranslateView.swift in Sources */,
 				E29247E92AA1D3B2008C5F70 /* File.swift in Sources */,
 				E26161202AA8CDA900A30A84 /* LanguageOptionsView.swift in Sources */,
 				E2E779632A93B5DB00AB3F16 /* DataType.swift in Sources */,
@@ -519,6 +550,7 @@
 				E261612B2AB20CE800A30A84 /* UserDefault+Wrapper.swift in Sources */,
 				E29247DF2AA1D2D4008C5F70 /* Evaluator.swift in Sources */,
 				E21AF9C12A8CB91000E33912 /* GomodelsParserBaseVisitor.swift in Sources */,
+				76C6A5212C6FC78400334E1D /* Project.swift in Sources */,
 				E29247C92A9A416C008C5F70 /* Panel+Ex.swift in Sources */,
 				E29247E32AA1D2D4008C5F70 /* Path.swift in Sources */,
 				E2E7796D2A93B70100AB3F16 /* TypeField.swift in Sources */,
@@ -729,7 +761,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -758,7 +790,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.spectatornan.goparser;
 				PRODUCT_NAME = "$(TARGET_NAME)";

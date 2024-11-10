@@ -54,11 +54,12 @@ struct SelectProjectsView: View {
         }.onAppear {
             projectNames = ProjectCache.shared.projectNames
         }
-        .onChange(of: selected) { newValue in
+        .onChange(of: selected, { oldValue, newValue in
+    
             openWindow(id: Const.WindowGroupID.project.rawValue, value: newValue)
-        }
+        })
         // not work
-        .onChange(of: ProjectCache.shared.projectNames) {  newValue in
+        .onChange(of: ProjectCache.shared.projectNames) { oldValue, newValue in
             projectNames = ProjectCache.shared.projectNames
         }
     }

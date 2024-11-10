@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension ContentView {
+extension ContentView1 {
     
     
     @ViewBuilder
